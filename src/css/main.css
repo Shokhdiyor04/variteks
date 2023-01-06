@@ -1,0 +1,57 @@
+.select-page::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 20px;
+    background-color: #dbdbdb;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.select-page::-webkit-scrollbar-thumb {
+    width: 10px;
+    border-radius: 20px;
+    background-color: #fff;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.slider-btn-bg-vector {
+    left: -20px;
+    top: 0;
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+}
+
+.swiper-pagination {
+    width: 5% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 5px !important;
+    background-color: #fff !important;
+    border-radius: 5px !important;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    -ms-border-radius: 5px !important;
+    -o-border-radius: 5px !important;
+}
+
+.variteks-about-right {
+    background: url('../images/mainPage/man-566x550.png') no-repeat center;
+}
+
+.new-product-page .new-product-left {
+    background: url("../images/navbar/section-c-left-overlay.png") no-repeat center;
+}

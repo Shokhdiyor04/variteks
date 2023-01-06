@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "sliderImage": "../navbarSlider/slider-1.jpg",
+        "text": "ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ ПРИ ЛЮБЫХ УСЛОВИЯХ."
+    },
+    {
+        "id": 2,
+        "sliderImage": "../navbarSlider/slider-2.jpg",
+        "text": "ENJOYING THE LIFE ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ НАСЛАЖДАЯСЬ ЖИЗНЬЮ."
+    },
+    {
+        "id": 3,
+        "sliderImage": "../navbarSlider/slider-3.jpg",
+        "text": "ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ ПРЕКРАСНЫМ ДНЕМ"
+    },
+    {
+        "id": 4,
+        "sliderImage": "../navbarSlider/slider-4.jpg",
+        "text": "ТЕБЕ НЕОБХОДИМО ДВИГАТЬСЯ ДАЛЬШЕ ИМЕЯ СВОЙ СОБСТВЕННЫЙ СТИЛЬ."
+    }
+]
