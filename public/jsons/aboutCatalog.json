@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "img": "../aboutCatalog/icon-1.png",
+    "text": "История",
+    "url": "#"
+  },
+  {
+    "id": 2,
+    "img": "../aboutCatalog/icon-2.png",
+    "text": "Наша Производственная база",
+    "url": "#"
+  },
+  {
+    "id": 3,
+    "img": "../aboutCatalog/icon-3.png",
+    "text": "Первый экспорт",
+    "url": "#"
+  },
+  {
+    "id": 4,
+    "img": "../aboutCatalog/icon-4.png",
+    "text": "Инновации Variteks",
+    "url": "#"
+  },
+  {
+    "id": 5,
+    "img": "../aboutCatalog/icon-5.png",
+    "text": "Variteks в мире",
+    "url": "#"
+  },
+  {
+    "id": 6,
+    "img": "../aboutCatalog/icon-6.png",
+    "text": "Сертификаты",
+    "url": "/certificate"
+  }
+]

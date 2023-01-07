@@ -1,0 +1,175 @@
+[
+  {
+    "id": 1,
+    "title": "Ортопедические Изделия",
+    "links": [
+      {
+        "id": 1,
+        "text": "Воротники Для Фиксации Шейных Позвонков",
+        "url": "/product-category/vorotnik"
+      },
+      {
+        "id": 2,
+        "text": "Поясничные Корсеты",
+        "url": "/product-category/karset"
+      },
+      {
+        "id": 3,
+        "text": "Бандажи И Шины Для Руки",
+        "url": "/product-category/bandaj-ruka"
+      },
+      {
+        "id": 4,
+        "text": "Шины-Бандажи На Запястье",
+        "url": "/product-category/shina"
+      },
+      {
+        "id": 5,
+        "text": "Бандажи Для Плечевого И Локтевого Суставов",
+        "url": "/product-category/bandajPlecho"
+      },
+      {
+        "id": 6,
+        "text": "Бандажи Для Голеностопного Сустава И Стопы",
+        "url": "/product-category/stopa"
+      },
+      {
+        "id": 7,
+        "text": "Силиконовая Продукция",
+        "url": "/product-category/silikon"
+      },
+      {
+        "id": 8,
+        "text": "Серия Дзюдо Шерсть",
+        "url": "/product-category/sherst"
+      },
+      {
+        "id": 9,
+        "text": "Nitgo",
+        "url": "/product-category/nitgo"
+      },
+      {
+        "id": 10,
+        "text": "Nexus",
+        "url": "/product-category/nexus"
+      },
+      {
+        "id": 11,
+        "text": "Softsport",
+        "url": "/product-category/sport"
+      },
+      {
+        "id": 12,
+        "text": "Ортопедические Подушки",
+        "url": "/product-category/podushka"
+      },
+      {
+        "id": 13,
+        "text": "Эластичные Бандажи И Другая Продукция",
+        "url": "/product-category/produksiya"
+      },
+      {
+        "id": 14,
+        "text": "Серебряной Продукт",
+        "url": "/product-category/serebryannoy"
+      },
+      {
+        "id": 15,
+        "text": "Изделия Для Детского Возраста",
+        "url": "/product-category/izdeliya"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Антиварикозные Изделия",
+    "links": [
+      {
+        "id": 1,
+        "text": "Класс I",
+        "url": "/class1"
+      },
+      {
+        "id": 2,
+        "text": "Класс II",
+        "url": "/class2"
+      },
+      {
+        "id": 3,
+        "text": "Класс III",
+        "url": "/class3"
+      },
+      {
+        "id": 4,
+        "text": "Компрессионный трикотаж, изготовленные на заказ",
+        "url": "/compretion"
+      },
+      {
+        "id": 5,
+        "text": "Комплект Металлический Для Надевания Чулок",
+        "url": "/mettal"
+      },
+      {
+        "id": 6,
+        "text": "Антиэмболийные Чулочные Изделия",
+        "url": "/izdeliya"
+      },
+      {
+        "id": 7,
+        "text": "Компрессионные Гольфы",
+        "url": "/golf"
+      },
+      {
+        "id": 8,
+        "text": "Активные Носки",
+        "url": "/active"
+      },
+      {
+        "id": 9,
+        "text": "Лимфедеме Изделия",
+        "url": "/limferme"
+      },
+      {
+        "id": 10,
+        "text": "Эластичный Изделия",
+        "url": "/elastik"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Липосакционные Корсеты",
+    "links": [
+      {
+        "id": 1,
+        "text": "Эластичный Изделия",
+        "url": "/elastik"
+      },
+      {
+        "id": 2,
+        "text": "Абдоминопластика",
+        "url": "/plastika"
+      },
+      {
+        "id": 3,
+        "text": "Увеличение Уменьшение Груди",
+        "url": "/inc-dec"
+      },
+      {
+        "id": 4,
+        "text": "Мужские Корсеты",
+        "url": "/men"
+      },
+      {
+        "id": 5,
+        "text": "Вспомогательные продукты",
+        "url": "/product"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Антиварикозные Изделия на заказ",
+    "links": []
+  }
+]

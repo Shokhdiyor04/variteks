@@ -43,7 +43,7 @@ export default function HomeTopBackgroundSwiperPage() {
               src={slide.sliderImage}
               alt={slide.id}
             />
-            <h3 className="absolute z-50 text-4xl text-white w-[500px] top-[100px] right-[50px]">
+            <h3 className="absolute z-50 text-4xl text-white w-[500px] top-[130px] right-[50px]">
               {slide.text}
             </h3>
             <img

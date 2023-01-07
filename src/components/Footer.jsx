@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -13,51 +14,51 @@ const Footer = () => {
         </div>
         <div className="footer-corporation flex flex-col gap-2">
           <h1 className="text-[20px] text-red-600 font-bold">Корпоративный</h1>
-          <a href="#" className="text-[15px]">
+          <Link to={"/"} className="text-[15px]">
             О нас
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Сертификаты
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Управление-персоналом
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Вход в систему для дилеров
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Блог
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Сведения о компании РУ
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Наша Политика в Отношении Персональных Данных
-          </a>
+          </Link>
         </div>
         <div className="footer-product flex flex-col gap-3">
           <h1 className="text-[20px] text-red-600 font-bold">Наша Продукция</h1>
-          <a href="#" className="text-[15px]">
+          <Link to={"/"} className="text-[15px]">
             Ортопедические Издели
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Антиварикозные Изделия
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             липосакционные корсеты
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             На заказ
-          </a>
+          </Link>
         </div>
         <div className="footer-news flex flex-col gap-3">
           <h1 className="text-[20px] text-red-600 font-bold">Новости</h1>
-          <a href="#" className="text-[15px]">
+          <Link to={"/"} className="text-[15px]">
             События
-          </a>
-          <a href="#" className="text-[15px]">
+          </Link>
+          <Link to={"/"} className="text-[15px]">
             Анонсы
-          </a>
+          </Link>
         </div>
         <div className="footer-catalog">
           <h1 className="text-[20px] text-red-600 font-bold">Каталог</h1>
@@ -88,10 +89,16 @@ const Footer = () => {
           </div>
 
           <div className="footer-contact-phone w-full px-5 flex flex-col gap-2">
-            <p className="text-[15px]">Variteks Medikal : +90 212 544 19 58</p>
-            <p className="text-[15px]">+90 212 544 30 50</p>
-            <p className="text-[15px]">+90 212 544 90 20</p>
-            <a href="#">info@variteks.com</a>
+            <a href="tel:+90 212 544 19 58" className="text-[15px]">
+              Variteks Medikal : +90 212 544 19 58
+            </a>
+            <a href="tel:+90 212 544 30 50" className="text-[15px]">
+              +90 212 544 30 50
+            </a>
+            <a href="tel:+90 212 544 90 20" className="text-[15px]">
+              +90 212 544 90 20
+            </a>
+            <Link to={"/"}>info@variteks.com</Link>
           </div>
 
           <div className="footer-contact-copyrighting w-full px-5">

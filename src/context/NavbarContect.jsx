@@ -1,7 +1,20 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 
 export const NavbarContect = createContext({});
 
 export const NavbarContectProvider = ({ children }) => {
-  return <NavbarContect.Provider>{children}</NavbarContect.Provider>;
+  const [links, setLinks] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
+  return (
+    <NavbarContect.Provider
+      value={{
+        links: links,
+        setLinks: setLinks,
+        errorMessage: errorMessage,
+        setErrorMessage: setErrorMessage,
+      }}
+    >
+      {children}
+    </NavbarContect.Provider>
+  );
 };

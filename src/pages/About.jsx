@@ -1,10 +1,50 @@
-import React from "react";
-
+import axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const About = () => {
+  const [cataglog, setCatalog] = useState([]);
+  const dropDawnMessage = useRef(null);
+  const dropDawnMessageBox = useRef(null);
+  useEffect(() => {
+    const getCatalag = async (url) => {
+      const response = await axios.get(url);
+      setCatalog(await response.data);
+    };
+    getCatalag("jsons/aboutCatalog.json");
+  });
+
+  const handleMessageBtn = () => {
+    dropDawnMessage.current.classList.toggle("active");
+    dropDawnMessageBox.current.classList.toggle("active");
+  };
+  if (!cataglog) return null;
   return (
-    <div>
+    <div className="relative">
+      <div
+        className="drop-dawn-message duration-300 w-full h-screen overflow-y-auto bg-black/70 fixed z-[1000] hidden justify-center items-center"
+        ref={dropDawnMessage}
+      >
+        <div
+          className="duration-300 drop-dawn-message-box w-[800px] max-w-[95%] min-h-[500px] bg-white rounded-2xl relative overflow-hidden scale-0"
+          ref={dropDawnMessageBox}
+        >
+          <div
+            className="duration-300 w-[80px] h-[80px] text-red-500 absolute flex justify-center items-center top-0 right-0 text-2xl cursor-pointer active:border active:border-black rounded-tr-2xl"
+            onClick={handleMessageBtn}
+          >
+            <FaTimes />
+          </div>
+          <div className="title w-full min-h-[80px] border-b-2 border-red-500 flex items-center p-4">
+            <h2 className="text-2xl text-red-500">История</h2>
+          </div>
+          <div className="message p-4">
+            <p>Message</p>
+          </div>
+        </div>
+      </div>
       <div className="about-main w-full min-h-[60vh]">
-        <img src="/images/mainPage/variteks-header.png" alt="" />
+        <img src={require("../images/mainPage/variteks-header.png")} alt="" />
       </div>
       <div className="about-header w-full min-h-screen py-5">
         <div className="about-header-top w-full min-h-[50vh] py-5 px-[200px] flex flex-col gap-3">
@@ -35,69 +75,20 @@ const About = () => {
           <h1 className="text-[20px] font-bold">Okan Öztürkatalay</h1>
           <p className="text-[14px]">Председатель Правления Группы компаний</p>
         </div>
-        <div className="about-header-bottom w-full min-h-[50vh] py-5 flex flex-wrap justify-around px-[130px] gap-[35px]">
-          <div className="history-box text-center w-[200px] py-3 flex flex-col gap-3">
-            <div className="history w-[180px] rounded-[15px] border-[5px]">
-              <img
-                src="/images/mainPage/icon-1.png"
-                className="w-full"
-                alt="history-icon"
-              />
-            </div>
-            <h2 className="text-[20px] font-bold">История</h2>
-          </div>
-          <div className="history-box text-center w-[200px] py-3 flex flex-col gap-3">
-            <div className="history w-[180px] rounded-[15px] border-[5px]">
-              <img
-                src="/images/mainPage/icon-2.png"
-                className="w-full"
-                alt="history-icon"
-              />
-            </div>
-            <h2 className="text-[20px] font-bold">
-              Наша Производственная база
-            </h2>
-          </div>
-          <div className="history-box text-center w-[200px] py-3 flex flex-col gap-3">
-            <div className="history w-[180px] rounded-[15px] border-[5px]">
-              <img
-                src="/images/mainPage/icon-3.png"
-                className="w-full"
-                alt="history-icon"
-              />
-            </div>
-            <h2 className="text-[20px] font-bold">Первый экспорт</h2>
-          </div>
-          <div className="history-box text-center w-[200px] py-3 flex flex-col gap-3">
-            <div className="history w-[180px] rounded-[15px] border-[5px]">
-              <img
-                src="/images/mainPage/icon-4.png"
-                className="w-full"
-                alt="history-icon"
-              />
-            </div>
-            <h2 className="text-[20px] font-bold">Инновации Variteks</h2>
-          </div>
-          <div className="history-box text-center w-[200px] py-3 flex flex-col gap-3">
-            <div className="history w-[180px] rounded-[15px] border-[5px]">
-              <img
-                src="/images/mainPage/icon-5.png"
-                className="w-full"
-                alt="history-icon"
-              />
-            </div>
-            <h2 className="text-[20px] font-bold">Variteks в мире</h2>
-          </div>
-          <div className="history-box text-center w-[200px] py-3 flex flex-col gap-3">
-            <div className="history w-[180px] rounded-[15px] border-[5px]">
-              <img
-                src="/images/mainPage/icon-6.png"
-                className="w-full"
-                alt="history-icon"
-              />
-            </div>
-            <h2 className="text-[20px] font-bold">Сертификаты</h2>
-          </div>
+        <div className="about-header-bottom w-[80%] mx-auto min-h-[50vh] py-5 flex flex-wrap justify-around px-[130px] gap-[50px]">
+          {cataglog.map((page) => (
+            <Link
+              to={page.url}
+              className="history-box text-center w-[200px] py-3 flex flex-col gap-3 cursor-pointer"
+              key={page.id}
+              onClick={handleMessageBtn}
+            >
+              <div className="history w-[180px] rounded-[15px] border-[5px]">
+                <img src={page.img} className="w-full" alt="history-icon" />
+              </div>
+              <h2 className="text-[20px] font-bold">{page.text}</h2>
+            </Link>
+          ))}
         </div>
       </div>
     </div>
