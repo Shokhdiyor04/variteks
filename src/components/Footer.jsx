@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full min-h-screen py-5">
+    <footer className="w-full min-h-screen py-5 px-2">
       <div className="footer-top w-full min-h-[50vh] flex justify-between">
         <div className="footer-logo flex items-center justify-center">
           <img

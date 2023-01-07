@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 
 const NewProductRight = () => {
@@ -24,21 +24,27 @@ const NewProductRight = () => {
     <div className="new-product-right w-[45%] min-h-screen relative">
       <Swiper
         slidesPerView={2}
-        modules={[Navigation]}
+        loop={true}
+        modules={[Pagination, Navigation]}
+        navigation={{ clickable: true }}
         className="swiper mySwiperPage"
       >
         {newProductSlider.map((slider) => (
           <SwiperSlide key={slider.id}>
             <div className="swiper-img w-[200px] flex flex-col items-center gap-5 justify-center">
               <div className="swiper-img-image">
-                <img src={slider.img} className="w-[100px]" alt={slider.id} />
+                <img
+                  src={slider.img}
+                  className="w-[150px] hover:scale-[1.2]"
+                  alt={slider.id}
+                />
               </div>
-              <h3 className="text-[23px] font-bold text-red-600">
+              <h3 className="text-[23px] text-center font-bold text-red-600">
                 {slider.text}
               </h3>
               <a
                 href="#"
-                className="w-[150px] py-2 px-5 rounded-[15px] bg-red-600 text-white hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s] hover:text-red-600"
+                className="w-[150px] flex justify-center items-center py-2 rounded-[15px] bg-red-600 text-white hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s] hover:text-red-600"
               >
                 {slider.btn}
               </a>

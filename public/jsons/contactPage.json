@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "url": "/contact-us",
+        "text": "Связаться с нами"
+    },
+    {
+        "id": 2,
+        "url": "/personnal-management",
+        "text": "Управление-персоналом"
+    }
+]

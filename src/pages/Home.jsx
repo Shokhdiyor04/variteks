@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HomeTopBackgroundSwiperPage from "../components/HomeTopBackgroundSwiper";
 import NewProductRight from "../components/NewProductRight";
-import { GoTriangleLeft, GoTriangleRight } from "react-icons/go";
 const Home = () => {
   return (
     <div>
@@ -69,15 +68,9 @@ const Home = () => {
         </div>
         <div className="new-product-page w-full min-h-screen flex py-5">
           <div className="new-product-left w-[55%] min-h-screen flex">
-            <div className="new-product-left-btn w-[45%] min-h-screen flex justify-end items-end pr-12">
-              <button className="text-4xl">
-                <GoTriangleLeft />
-              </button>
-              <button className="text-4xl">
-                <GoTriangleRight />
-              </button>
+            <div className="new-product-left-btn w-[35%] min-h-screen flex justify-end items-end pr-12">
             </div>
-            <div className="new-product-left-text w-[55%] min-h-screen flex flex-col justify-center">
+            <div className="new-product-left-text w-[60%] min-h-screen flex flex-col justify-start">
               <h1 className="text-red-600 text-[40px] font-bold">
                 Новая продукция
               </h1>
