@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HomeTopBackgroundSwiperPage from "../components/HomeTopBackgroundSwiper";
 import NewProductRight from "../components/NewProductRight";
-import { GoTriangleLeft, GoTriangleRight } from "react-icons/go";
 const Home = () => {
   return (
     <div>
@@ -12,7 +11,7 @@ const Home = () => {
       <section>
         <div className="variteks-about w-full min-h-screen flex py-4">
           <div className="variteks-about-left w-[60%] min-h-screen flex justify-end items-center">
-            <div className="variteks-about-left-text w-[70%] flex flex-col gap-5">
+            <div className="variteks-about-left-text w-[70%] flex items-start flex-col gap-5">
               <h1 className="text-[45px] font-bold">
                 Кто такой Варитекс<span className="text-red-600">?</span>
               </h1>
@@ -41,7 +40,7 @@ const Home = () => {
               </p>
               <Link
                 to={"/about"}
-                className="w-[260px] px-4 py-1 rounded-[15px] bg-red-600 text-white hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[1px] hover:border-red-600 hover:duration-[.5s]"
+                className="px-3 flex justify-center items-center py-2 rounded-[15px] bg-red-600 text-white hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[1px] hover:border-red-600 hover:duration-[.5s]"
               >
                 Дополнительная Информация
               </Link>
@@ -57,27 +56,21 @@ const Home = () => {
               alt="ballerina"
             />
           </div>
-          <div className="ballerina-right w-[40%] min-h-screen">
-            <a
-              href="#"
-              className="text-[15px] w-[170px] mt-[100px] text-white bg-red-600 rounded-[15px] py-3 px-3 flex justify-around items-center hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s]"
+          <div className="ballerina-right flex justify-start items-start w-[40%] min-h-screen">
+            <Link
+              to={'/'}
+              className="text-[18px] px-5 mt-[100px] text-white bg-red-600 rounded-[15px] py-2 flex justify-center gap-5 items-center hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s]"
             >
               <i className="fas fas fa-search"></i>
               Поиск
-            </a>
+            </Link>
           </div>
         </div>
         <div className="new-product-page w-full min-h-screen flex py-5">
           <div className="new-product-left w-[55%] min-h-screen flex">
-            <div className="new-product-left-btn w-[45%] min-h-screen flex justify-end items-end pr-12">
-              <button className="text-4xl">
-                <GoTriangleLeft />
-              </button>
-              <button className="text-4xl">
-                <GoTriangleRight />
-              </button>
+            <div className="new-product-left-btn w-[35%] min-h-screen flex justify-end items-end pr-12">
             </div>
-            <div className="new-product-left-text w-[55%] min-h-screen flex flex-col justify-center">
+            <div className="new-product-left-text w-[60%] min-h-screen flex flex-col justify-start">
               <h1 className="text-red-600 text-[40px] font-bold">
                 Новая продукция
               </h1>

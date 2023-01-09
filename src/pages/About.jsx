@@ -83,7 +83,7 @@ const About = () => {
               key={page.id}
               onClick={handleMessageBtn}
             >
-              <div className="history w-[180px] rounded-[15px] border-[5px]">
+              <div className="history w-[180px] rounded-[15px] border-[5px] hover:border-[5px] hover:border-[#838383] hover:duration-500">
                 <img src={page.img} className="w-full" alt="history-icon" />
               </div>
               <h2 className="text-[20px] font-bold">{page.text}</h2>

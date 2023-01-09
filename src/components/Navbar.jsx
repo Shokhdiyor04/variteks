@@ -1,78 +1,148 @@
 import axios from "axios";
 import React, { useContext, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { NavbarContect } from "../context/NavbarContect";
+import SelectPage from "./SelectPage";
+import ContactPage from "./ContactPage";
+import {
+  AiFillFacebook,
+  AiOutlineSearch,
+  AiFillLinkedin,
+  AiFillTwitterSquare,
+} from "react-icons/ai";
+import { FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 const Navbar = () => {
-  const { links, setLinks, setErrorMessage } = useContext(NavbarContect);
+  const { links, setLinks, setErrorMessage, contact, setContact } =
+    useContext(NavbarContect);
   useEffect(() => {
-    const getLinks = async (url) => {
+    const getLinks = async (selectPageUrl, contactPageUrl) => {
       try {
-        const response = await axios.get(url);
-        setLinks(await response.data);
+        const responseSelectPage = await axios.get(selectPageUrl);
+        const responseContactPage = await axios.get(contactPageUrl);
+        setLinks(await responseSelectPage.data);
+        setContact(await responseContactPage.data);
       } catch (error) {
         console.error(error.message);
         setErrorMessage(error.message);
       }
     };
-    getLinks("jsons/selectPage.json");
+    getLinks("jsons/selectPage.json", "jsons/contactPage.json");
   });
   const selectPage = useRef(null);
+  const contactPage = useRef(null);
+  const navbar = useRef(null);
+
+  window.addEventListener("scroll", (event) => {
+    navbar.current.classList.toggle(
+      "active",
+      event.path[event.path.length - 1].scrollY > 300
+    );
+  });
   const handleSelectPageButton = () => {
     selectPage.current.classList.toggle("active");
+  };
+  const handleSelectPageRemoveButton = () => {
+    selectPage.current.classList.remove("active");
+  };
+
+  const handleContactPageButton = () => {
+    contactPage.current.classList.toggle("active");
+  };
+  const handleContactPageRemoveButton = () => {
+    contactPage.current.classList.remove("active");
   };
   if (!links) return null;
   return (
     <>
-      <nav className="w-full bg-white min-h-[85px] flex z-20 fixed top-0">
+      <nav className="w-full min-h-[85px] flex z-20 fixed" ref={navbar}>
         <div className="nav-logo w-[40%] min-h-[85px] flex justify-center gap-2 items-center">
           <NavLink to={"/"}>
             <img
               src={require("../images/mainPage/logo.png")}
               className="w-[185px]"
               alt="logo"
+              onClick={() => {
+                handleSelectPageRemoveButton();
+                handleContactPageRemoveButton();
+              }}
             />
           </NavLink>
           <NavLink
             to={"/login"}
-            className="px-[8px] py-2 w-[180px] h-[20px] text-white bg-red-600 flex justify-center items-center text-[10px] rounded-[25px] hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s]"
+            onClick={() => {
+              handleSelectPageRemoveButton();
+              handleContactPageRemoveButton();
+            }}
+            className="px-[8px] py-2 text-white bg-red-600 flex justify-center items-center text-[10px] rounded-[25px] hover:text-red-600 hover:bg-white hover hover-red-600 border-[2px] border-transparent hover:border-red-600 hover:duration-[.5s]"
           >
             Антиварикозные Изделия на заказ
           </NavLink>
         </div>
-        <div className="nav-menu w-[35%] min-h-[85px] flex justify-around text-black items-center text-[14px]">
-          <NavLink to="about">О нас</NavLink>
+        <div className="nav-menu w-[35%] min-h-[85px] flex justify-around text-white items-center text-[14px]">
           <NavLink
-            to="#"
-            className="option"
-            id="option"
-            onClick={handleSelectPageButton}
+            to="/about"
+            onClick={() => {
+              handleSelectPageRemoveButton();
+              handleContactPageRemoveButton();
+            }}
+          >
+            О нас
+          </NavLink>
+          <div
+            className="option cursor-pointer"
+            onClick={() => {
+              if (contactPage) {
+                handleSelectPageButton();
+                handleContactPageRemoveButton();
+              } else {
+                handleSelectPageButton();
+              }
+            }}
           >
             Наша продукция <i className="fas fas fa-angle-down"></i>
+          </div>
+          <NavLink
+            to="/blog"
+            onClick={() => {
+              handleSelectPageRemoveButton();
+              handleContactPageRemoveButton();
+            }}
+          >
+            Блог
           </NavLink>
-          <NavLink to="blog">Блог</NavLink>
-          <NavLink to="#">
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              if (selectPage) {
+                handleContactPageButton();
+                handleSelectPageRemoveButton();
+              } else {
+                handleContactPageButton();
+              }
+            }}
+          >
             Контакты <i className="fas fas fa-angle-down"></i>
-          </NavLink>
+          </div>
         </div>
         <div className="nav-btn w-[25%] min-h-[85px] px-2 flex items-center justify-end gap-2 text-[13px]">
-          <div>
-            <i className="fa fas fas fa-search"></i>
-          </div>
-          <a href="/">
-            <i className="fa fas fab fab fa-facebook-f"></i>
-          </a>
-          <a href="/">
-            <i className="fab fab fa-instagram"></i>
-          </a>
-          <a href="/">
-            <i className="fa fas fab fa-linkedin"></i>
-          </a>
-          <a href="/">
-            <i className="fa fas fab fa-twitter"></i>
-          </a>
-          <a href="/">
-            <i className="fa fas fab fab fa-youtube"></i>
-          </a>
+          <Link to={"/search"} className="text-white">
+            <AiOutlineSearch />
+          </Link>
+          <Link to="/" className="text-white">
+            <AiFillFacebook />
+          </Link>
+          <Link to="/" className="text-white">
+            <FaInstagramSquare />
+          </Link>
+          <Link to="/" className="text-white">
+            <AiFillLinkedin />
+          </Link>
+          <Link to="/" className="text-white">
+            <AiFillTwitterSquare />
+          </Link>
+          <Link to="/" className="text-white">
+            <FaYoutubeSquare />
+          </Link>
           <select className="rounded-lg text-[10px]">
             <option value="ru">RU</option>
             <option value="tr">TR</option>
@@ -81,27 +151,10 @@ const Navbar = () => {
           </select>
         </div>
       </nav>
-      <div
-        className={
-          "select-page overflow-y-auto fixed justify-around w-full p-3 h-[calc(100vh-85px)] hidden border z-50 bg-white top-[85px]"
-        }
-        ref={selectPage}
-      >
-        {links.map((linkBox) => (
-          <div className="w-[20%] flex flex-col" key={linkBox.id}>
-            <h2 className="text-[15px] text-red-600">{linkBox.title}</h2>
-            {linkBox.links.map((link) => (
-              <NavLink
-                to={link.url}
-                key={link.id}
-                onClick={handleSelectPageButton}
-              >
-                {link.text}
-              </NavLink>
-            ))}
-          </div>
-        ))}
-      </div>
+      <SelectPage props={{ handleSelectPageRemoveButton, selectPage, links }} />
+      <ContactPage
+        props={{ contactPage, contact, handleContactPageRemoveButton }}
+      />
     </>
   );
 };

@@ -47,12 +47,12 @@ export default function HomeTopBackgroundSwiperPage() {
               {slide.text}
             </h3>
             <img
-              className="absolute z-10 pointer-events-none blur-sm"
+              className="absolute z-10 pointer-events-none"
               src={NavbarBgLogo}
               alt="bg"
             />
             <img
-              className="slider-btn-bg-vector absolute z-10 pointer-events-none blur-[1px] "
+              className="slider-btn-bg-vector absolute z-10 pointer-events-none"
               src={SlideBtnBgVector}
               alt="bg"
             />

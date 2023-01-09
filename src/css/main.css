@@ -12,19 +12,12 @@
   -o-transform: rotateX(180deg);
 }
 
-.swiper-pagination {
-  width: 5% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 10px !important;
-}
+
 
 .swiper-pagination-bullet {
   width: 10px !important;
   height: 5px !important;
-  background-color: #fff !important;
+  background-color: rgb(71, 71, 71) !important;
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -37,8 +30,7 @@
 }
 
 .new-product-page .new-product-left {
-  background: url("../images/navbar/section-c-left-overlay.png") no-repeat
-    center;
+  background: url("../images/navbar/section-c-left-overlay.png") no-repeat center;
 }
 
 .blog-main {
@@ -67,4 +59,46 @@ footer {
 
 footer a {
   color: #fff;
+}
+
+.select-page a:hover {
+  color: red !important;
+}
+
+nav.active {
+  background-color: white;
+}
+
+nav.active .nav-menu, nav.active .nav-btn a {
+  color: black;
+}
+
+.swiper-button-prev {
+  left: 150px !important;
+}
+
+.swiper-button-next {
+  right: 200px !important;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  top: 560px !important;
+  background-color: rgb(220, 38, 38 , 1);
+  border-radius: 50%;
+  width: 40px !important;
+  height: 40px !important;
+  box-shadow: 0 0 5px 2px rgb(224, 141, 141);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 16px !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+footer a:hover {
+ color: red;
 }

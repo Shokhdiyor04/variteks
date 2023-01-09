@@ -1,7 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Ортопедические Изделия",
+    "title": {
+      "text": "Ортопедические Изделия",
+      "url": "/product-category"
+    },
     "links": [
       {
         "id": 1,
@@ -82,94 +85,103 @@
   },
   {
     "id": 2,
-    "title": "Антиварикозные Изделия",
+    "title": {
+      "text": "Антиварикозные Изделия",
+      "url": "/anti-varicose-products"
+    },
     "links": [
       {
         "id": 1,
         "text": "Класс I",
-        "url": "/class1"
+        "url": "/product-category/class1"
       },
       {
         "id": 2,
         "text": "Класс II",
-        "url": "/class2"
+        "url": "/product-category/class2"
       },
       {
         "id": 3,
         "text": "Класс III",
-        "url": "/class3"
+        "url": "/product-category/class3"
       },
       {
         "id": 4,
         "text": "Компрессионный трикотаж, изготовленные на заказ",
-        "url": "/compretion"
+        "url": "/product-category/compretion"
       },
       {
         "id": 5,
         "text": "Комплект Металлический Для Надевания Чулок",
-        "url": "/mettal"
+        "url": "/product-category/mettal"
       },
       {
         "id": 6,
         "text": "Антиэмболийные Чулочные Изделия",
-        "url": "/izdeliya"
+        "url": "/product-category/izdeliya"
       },
       {
         "id": 7,
         "text": "Компрессионные Гольфы",
-        "url": "/golf"
+        "url": "/product-category/golf"
       },
       {
         "id": 8,
         "text": "Активные Носки",
-        "url": "/active"
+        "url": "/product-category/active"
       },
       {
         "id": 9,
         "text": "Лимфедеме Изделия",
-        "url": "/limferme"
+        "url": "/product-category/limferme"
       },
       {
         "id": 10,
         "text": "Эластичный Изделия",
-        "url": "/elastik"
+        "url": "/product-category/elastik"
       }
     ]
   },
   {
     "id": 3,
-    "title": "Липосакционные Корсеты",
+    "title": {
+      "text": "Липосакционные Корсеты",
+      "url": "/liposuction-corsets"
+    },
     "links": [
       {
         "id": 1,
         "text": "Эластичный Изделия",
-        "url": "/elastik"
+        "url": "/product-category/elastik"
       },
       {
         "id": 2,
         "text": "Абдоминопластика",
-        "url": "/plastika"
+        "url": "/product-category/plastika"
       },
       {
         "id": 3,
         "text": "Увеличение Уменьшение Груди",
-        "url": "/inc-dec"
+        "url": "/product-category/inc-dec"
       },
       {
         "id": 4,
         "text": "Мужские Корсеты",
-        "url": "/men"
+        "url": "/product-category/men"
       },
       {
         "id": 5,
         "text": "Вспомогательные продукты",
-        "url": "/product"
+        "url": "/product-category/product"
       }
     ]
   },
   {
     "id": 4,
-    "title": "Антиварикозные Изделия на заказ",
+    "title": {
+      "text": "Антиварикозные Изделия на заказ",
+      "url": "/anti-varicose-products-order"
+    },
     "links": []
   }
 ]
