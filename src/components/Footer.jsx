@@ -3,21 +3,20 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full min-h-screen py-5 px-2">
-      <div className="footer-top w-full min-h-[50vh] flex justify-between">
+    <footer className="w-full min-h-screen flex flex-wrap justify-between py-5 px-2">
         <div className="footer-logo flex items-center justify-center">
           <img
-            src={require("../images/mainPage/logo.png")}
+            src={require("../images/footer/logo-footer.png")}
             className="w-[200px]"
             alt="Logo"
           />
         </div>
-        <div className="footer-corporation flex flex-col gap-2">
+        <div className="footer-corporation w-[20%] flex flex-col gap-2">
           <h1 className="text-[20px] text-red-600 font-bold">Корпоративный</h1>
-          <Link to={"/"} className="text-[15px]">
+          <Link to={"/about"} className="text-[15px]">
             О нас
           </Link>
-          <Link to={"/"} className="text-[15px]">
+          <Link to={"/certificate"} className="text-[15px]">
             Сертификаты
           </Link>
           <Link to={"/"} className="text-[15px]">
@@ -36,7 +35,7 @@ const Footer = () => {
             Наша Политика в Отношении Персональных Данных
           </Link>
         </div>
-        <div className="footer-product flex flex-col gap-3">
+        <div className="footer-product flex w-[20%] flex-col gap-3">
           <h1 className="text-[20px] text-red-600 font-bold">Наша Продукция</h1>
           <Link to={"/"} className="text-[15px]">
             Ортопедические Издели
@@ -60,12 +59,10 @@ const Footer = () => {
             Анонсы
           </Link>
         </div>
-        <div className="footer-catalog">
+        <div className="footer-catalog w-[20%]">
           <h1 className="text-[20px] text-red-600 font-bold">Каталог</h1>
         </div>
-      </div>
-      <div className="footer-bottom w-full min-h-[50vh]">
-        <div className="footer-contact flex flex-col gap-5">
+        <div className="footer-contact w-[30%] flex flex-col gap-5">
           <div className="footer-contact-text w-full px-5">
             <h1 className="text-red-600 font-bold">Контакты</h1>
           </div>
@@ -107,7 +104,6 @@ const Footer = () => {
             </p>
           </div>
         </div>
-      </div>
     </footer>
   );
 };

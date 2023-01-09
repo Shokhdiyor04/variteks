@@ -4,15 +4,23 @@ import { Link, NavLink } from "react-router-dom";
 import { NavbarContect } from "../context/NavbarContect";
 import SelectPage from "./SelectPage";
 import ContactPage from "./ContactPage";
+import {
+  AiFillFacebook,
+  AiOutlineSearch,
+  AiFillLinkedin,
+  AiFillTwitterSquare,
+} from "react-icons/ai";
+import { FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 const Navbar = () => {
-  const { links, setLinks, setErrorMessage, contact, setContact } = useContext(NavbarContect);
+  const { links, setLinks, setErrorMessage, contact, setContact } =
+    useContext(NavbarContect);
   useEffect(() => {
     const getLinks = async (selectPageUrl, contactPageUrl) => {
       try {
         const responseSelectPage = await axios.get(selectPageUrl);
         const responseContactPage = await axios.get(contactPageUrl);
         setLinks(await responseSelectPage.data);
-        setContact(await responseContactPage.data)
+        setContact(await responseContactPage.data);
       } catch (error) {
         console.error(error.message);
         setErrorMessage(error.message);
@@ -53,17 +61,19 @@ const Navbar = () => {
               src={require("../images/mainPage/logo.png")}
               className="w-[185px]"
               alt="logo"
-              onClick={
-                handleSelectPageRemoveButton && handleContactPageRemoveButton
-              }
+              onClick={() => {
+                handleSelectPageRemoveButton();
+                handleContactPageRemoveButton();
+              }}
             />
           </NavLink>
           <NavLink
             to={"/login"}
-            onClick={
-              handleSelectPageRemoveButton && handleContactPageRemoveButton
-            }
-            className="px-[8px] py-2 w-[180px] h-[20px] text-white bg-red-600 flex justify-center items-center text-[10px] rounded-[25px] hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s]"
+            onClick={() => {
+              handleSelectPageRemoveButton();
+              handleContactPageRemoveButton();
+            }}
+            className="px-[8px] py-2 text-white bg-red-600 flex justify-center items-center text-[10px] rounded-[25px] hover:text-red-600 hover:bg-white hover hover-red-600 border-[2px] border-transparent hover:border-red-600 hover:duration-[.5s]"
           >
             Антиварикозные Изделия на заказ
           </NavLink>
@@ -71,9 +81,10 @@ const Navbar = () => {
         <div className="nav-menu w-[35%] min-h-[85px] flex justify-around text-white items-center text-[14px]">
           <NavLink
             to="/about"
-            onClick={
-              handleSelectPageRemoveButton && handleContactPageRemoveButton
-            }
+            onClick={() => {
+              handleSelectPageRemoveButton();
+              handleContactPageRemoveButton();
+            }}
           >
             О нас
           </NavLink>
@@ -92,9 +103,10 @@ const Navbar = () => {
           </div>
           <NavLink
             to="/blog"
-            onClick={
-              handleSelectPageRemoveButton && handleContactPageRemoveButton
-            }
+            onClick={() => {
+              handleSelectPageRemoveButton();
+              handleContactPageRemoveButton();
+            }}
           >
             Блог
           </NavLink>
@@ -113,23 +125,23 @@ const Navbar = () => {
           </div>
         </div>
         <div className="nav-btn w-[25%] min-h-[85px] px-2 flex items-center justify-end gap-2 text-[13px]">
-          <Link to={"/search"}>
-            <i className="fas fa-search"></i>
+          <Link to={"/search"} className="text-white">
+            <AiOutlineSearch />
           </Link>
-          <Link to="/">
-            <i className="fab fa-facebook-f"></i>
+          <Link to="/" className="text-white">
+            <AiFillFacebook />
           </Link>
-          <Link to="/">
-            <i className="fab fa-instagram"></i>
+          <Link to="/" className="text-white">
+            <FaInstagramSquare />
           </Link>
-          <Link to="/">
-            <i className="fab fa-linkedin"></i>
+          <Link to="/" className="text-white">
+            <AiFillLinkedin />
           </Link>
-          <Link to="/">
-            <i className="fab fa-twitter"></i>
+          <Link to="/" className="text-white">
+            <AiFillTwitterSquare />
           </Link>
-          <Link to="/">
-            <i className="fab fa-youtube"></i>
+          <Link to="/" className="text-white">
+            <FaYoutubeSquare />
           </Link>
           <select className="rounded-lg text-[10px]">
             <option value="ru">RU</option>

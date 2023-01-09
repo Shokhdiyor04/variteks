@@ -69,16 +69,25 @@ nav.active {
   background-color: white;
 }
 
-nav.active .nav-menu {
+nav.active .nav-menu, nav.active .nav-btn a {
   color: black;
 }
 
+.swiper-button-prev {
+  left: 150px !important;
+}
+
+.swiper-button-next {
+  right: 200px !important;
+}
+
 .swiper-button-prev, .swiper-button-next {
-  background-color: #fff;
+  top: 560px !important;
+  background-color: rgb(220, 38, 38 , 1);
   border-radius: 50%;
   width: 40px !important;
   height: 40px !important;
-  box-shadow: 0 0 5px 2px gray;
+  box-shadow: 0 0 5px 2px rgb(224, 141, 141);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -87,5 +96,9 @@ nav.active .nav-menu {
 
 .swiper-button-prev::after, .swiper-button-next::after {
   font-size: 16px !important;
-  color: #000 !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+footer a:hover {
+ color: red;
 }

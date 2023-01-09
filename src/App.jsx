@@ -12,6 +12,7 @@ import PersonnalManagement from "./pages/PersonnalManagement";
 import AntiVaricoseProducts from "./pages/AntiVaricoseProducts";
 import LiposuctionCorsets from "./pages/LiposuctionCorsets";
 import AntiVaricoseProductsOrder from "./pages/AntiVaricoseProductsOrder";
+import Certificate from "./pages/Certificate";
 function App() {
   return (
     <Router>
@@ -28,6 +29,7 @@ function App() {
           element={<AntiVaricoseProducts />}
         />
         <Route path="/liposuction-corsets" element={<LiposuctionCorsets />} />
+        <Route path="/certificate" element={<Certificate />} />
         <Route
           path="/anti-varicose-products-order"
           element={<AntiVaricoseProductsOrder />}

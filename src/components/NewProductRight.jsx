@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation, Pagination } from "swiper";
+import { Link } from "react-router-dom";
 
 
 const NewProductRight = () => {
@@ -21,7 +22,7 @@ const NewProductRight = () => {
   });
   if (!newProductSlider) return null;
   return (
-    <div className="new-product-right w-[45%] min-h-screen relative">
+    <div className="new-product-right w-[45%] min-h-[100vh] relative">
       <Swiper
         slidesPerView={2}
         loop={true}
@@ -31,7 +32,7 @@ const NewProductRight = () => {
       >
         {newProductSlider.map((slider) => (
           <SwiperSlide key={slider.id}>
-            <div className="swiper-img w-[200px] flex flex-col items-center gap-5 justify-center">
+            <div className="swiper-img w-[200px] min-h-[120vh] flex flex-col items-center gap-5 justify-center">
               <div className="swiper-img-image">
                 <img
                   src={slider.img}
@@ -42,12 +43,12 @@ const NewProductRight = () => {
               <h3 className="text-[23px] text-center font-bold text-red-600">
                 {slider.text}
               </h3>
-              <a
-                href="#"
-                className="w-[150px] flex justify-center items-center py-2 rounded-[15px] bg-red-600 text-white hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s] hover:text-red-600"
+              <Link
+                to={'/'}
+                className="px-4 flex justify-center items-center py-2 rounded-[15px] bg-red-600 text-white hover:bg-white hover hover-red-600 hover:border-[1px] hover:border-red-600 hover:duration-[.5s] hover:text-red-600"
               >
                 {slider.btn}
-              </a>
+              </Link>
             </div>
           </SwiperSlide>
         ))}
