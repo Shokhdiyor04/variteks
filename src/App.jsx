@@ -9,14 +9,14 @@ import { ProductCategory } from "./pages/ProductCategory";
 function App() {
   return (
     <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/product-category/:name" element={<ProductCategory />} />
-        </Routes>
-        <Footer />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/product-category/:name" element={<ProductCategory />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
