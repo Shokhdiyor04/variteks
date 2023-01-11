@@ -5,13 +5,12 @@ import NewProductRight from "../components/NewProductRight";
 const Home = () => {
   return (
     <div>
-      
       <HomeTopBackgroundSwiperPage />
       {/* Home Page  */}
       <section>
-        <div className="variteks-about w-full min-h-screen flex py-4">
-          <div className="variteks-about-left w-[60%] min-h-screen flex justify-end items-center">
-            <div className="variteks-about-left-text w-[70%] flex items-start flex-col gap-5">
+        <div className="variteks-about w-full min-h-screen flex flex-col md:flex-row py-4">
+          <div className="variteks-about-left w-full md:w-[60%] min-h-screen flex md:justify-end md:p-0 pl-4 items-center">
+            <div className="variteks-about-left-text w-[90%] flex items-start flex-col gap-5">
               <h1 className="text-[45px] font-bold">
                 Кто такой Варитекс<span className="text-red-600">?</span>
               </h1>
@@ -46,31 +45,29 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <div className="variteks-about-right w-[40%] min-h-screen bg-no-repeat"></div>
+          <div className="variteks-about-right md:w-[40%] w-full min-h-screen bg-no-repeat"></div>
         </div>
-        <div className="ballerina-page w-full min-h-screen flex py-5">
-          <div className="ballerina-left w-[60%] min-h-screen flex justify-center items-center">
+        <div className="ballerina-page md:flex-row flex-col-reverse w-full min-h-0 flex py-5">
+          <div className="ballerina-left w-full md:w-[60%] min-h-0 flex justify-center items-center overflow-hidden">
             <img
               src={require("../images/mainPage/ballerina.png")}
-              className="w-[500px]"
+              className="md:w-[500px] max-w-[300px]"
               alt="ballerina"
             />
           </div>
-          <div className="ballerina-right flex justify-start items-start w-[40%] min-h-screen">
+          <div className="ballerina-right flex justify-start items-start w-full md:w-[40%] md:min-h-screen min-h-0">
             <Link
-              to={'/'}
-              className="text-[18px] px-5 mt-[100px] text-white bg-red-600 rounded-[15px] py-2 flex justify-center gap-5 items-center hover:text-red-600 hover:bg-white hover hover-red-600 hover:border-[2px] hover:border-red-600 hover:duration-[.5s]"
+              to={"/"}
+              className="text-[18px] px-5 mt-[100px] text-white bg-red-600 rounded-[15px] py-2 flex justify-center gap-5 items-center hover:text-red-600 hover:bg-white hover hover-red-600 border-[2px] hover:border-red-600 hover:duration-[.5s]"
             >
               <i className="fas fas fa-search"></i>
               Поиск
             </Link>
           </div>
         </div>
-        <div className="new-product-page w-full min-h-screen flex py-5">
-          <div className="new-product-left w-[55%] min-h-screen flex">
-            <div className="new-product-left-btn w-[35%] min-h-screen flex justify-end items-end pr-12">
-            </div>
-            <div className="new-product-left-text w-[60%] min-h-screen flex flex-col justify-start">
+        <div className="new-product-page w-full min-h-0 flex md:flex-row flex-col py-5 items-center">
+          <div className="new-product-left md:w-[55%] w-[90%] min-h-0 flex justify-center">
+            <div className="new-product-left-text w-[410px] min-h-0 flex flex-col justify-start">
               <h1 className="text-red-600 text-[40px] font-bold">
                 Новая продукция
               </h1>

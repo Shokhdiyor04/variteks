@@ -28,6 +28,7 @@ export default function HomeTopBackgroundSwiperPage() {
       <Swiper
         modules={[Pagination]}
         loop={true}
+        autoplay={{ delay: 2000 }}
         pagination={{ clickable: true }}
         className="mySwiper relative"
       >
@@ -43,7 +44,7 @@ export default function HomeTopBackgroundSwiperPage() {
               src={slide.sliderImage}
               alt={slide.id}
             />
-            <h3 className="absolute z-50 text-4xl text-white w-[500px] top-[130px] right-[50px]">
+            <h3 className="absolute z-50 text-4xl text-white md:w-[500px] w-[300px] max-w-full md:top-[130px] md:right-[50px] bottom-[40%]">
               {slide.text}
             </h3>
             <img

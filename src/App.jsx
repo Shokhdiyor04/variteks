@@ -21,9 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-<<<<<<< HEAD
         <Route path="/product-category/:name" element={<ProductCategory />} />
-=======
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/personnal-management" element={<PersonnalManagement />} />
         <Route path="/product-category" element={<ProductCategory />} />
@@ -41,7 +39,6 @@ function App() {
           path="/product-category/:name"
           element={<ProductCategoryPage />}
         />
->>>>>>> 6b0f04cdfc80566df7a820785bcf945e55eea431
       </Routes>
       <Footer />
     </Router>

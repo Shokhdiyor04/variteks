@@ -12,7 +12,10 @@
   -o-transform: rotateX(180deg);
 }
 
-
+.ballerina-page {
+  background: url(../images/mainPage/section-b-bg.jpg) no-repeat center;
+  background-size: cover;
+}
 
 .swiper-pagination-bullet {
   width: 10px !important;
@@ -30,7 +33,8 @@
 }
 
 .new-product-page .new-product-left {
-  background: url("../images/navbar/section-c-left-overlay.png") no-repeat center;
+  background: url("../images/navbar/section-c-left-overlay.png") no-repeat
+    center;
 }
 
 .blog-main {
@@ -69,21 +73,37 @@ nav.active {
   background-color: white;
 }
 
-nav.active .nav-menu, nav.active .nav-btn a {
+nav.active .nav-menu,
+nav.active .nav-btn a {
   color: black;
 }
 
+nav.active .bars {
+  color: #000;
+}
+
 .swiper-button-prev {
-  left: 150px !important;
+  left: 40% !important;
 }
 
 .swiper-button-next {
-  right: 200px !important;
+  right: 40% !important;
 }
 
-.swiper-button-prev, .swiper-button-next {
-  top: 560px !important;
-  background-color: rgb(220, 38, 38 , 1);
+@media screen and (max-width: 768px) {
+  .swiper-button-prev {
+    left: 30% !important;
+  }
+
+  .swiper-button-next {
+    right: 30% !important;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 95% !important;
+  background-color: rgb(220, 38, 38, 1);
   border-radius: 50%;
   width: 40px !important;
   height: 40px !important;
@@ -94,11 +114,12 @@ nav.active .nav-menu, nav.active .nav-btn a {
   -o-border-radius: 50%;
 }
 
-.swiper-button-prev::after, .swiper-button-next::after {
+.swiper-button-prev::after,
+.swiper-button-next::after {
   font-size: 16px !important;
   color: rgb(255, 255, 255) !important;
 }
 
 footer a:hover {
- color: red;
+  color: red;
 }
